@@ -17,7 +17,22 @@ module.exports = {
     'assets/main.scss'
   ],
   modules: [
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    ['nuxt-fontawesome', 
+      {
+        imports: 
+        [
+          {
+            set: '@fortawesome/free-solid-svg-icons',
+            icons: ['fas']
+          },
+          {
+            set: '@fortawesome/free-brands-svg-icons',
+            icons: ['fab']
+          }
+        ]
+      }
+    ]
   ],
   /*
   ** Customize the progress bar color
