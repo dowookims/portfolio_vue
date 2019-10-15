@@ -1,11 +1,11 @@
 <template>
   <section class="container">
-    <div class="sheet board">
+    <div class="sheet">
       <div class="img">
         <img src="@/static/my_pic.jpg" />
       </div>
       <h2 class="subtitle">
-        Frontend Developer with React & Vue
+        Project
       </h2>
     </div>
   </section>
@@ -14,13 +14,15 @@
 <script>
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .container {
   display: flex;
   padding: 0;
   overflow: hidden;
 }
 .sheet {
+  height: calc(100vh - 60px);
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;

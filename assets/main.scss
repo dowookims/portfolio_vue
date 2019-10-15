@@ -1,0 +1,12 @@
+.page-enter-active, .page-leave-active {
+  transition: opacity .8s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+}
+
+.board {
+  width: 100vw;
+  min-height: calc(100vh - 60px);
+  overflow-x: hidden;
+}
