@@ -51,9 +51,29 @@ html {
 }
 
 .app {
-  background-color: #7950f2;
+  background-color: #181818;
   min-height: 100vh;
   overflow-x: hidden;
+  overflow-y: scroll;
+  &::-webkit-scrollbar-track
+  {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+  }
+
+  &::-webkit-scrollbar
+  {
+    width: 12px;
+    background-color: #F5F5F5;
+  }
+
+  &::-webkit-scrollbar-thumb
+  {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #D62929;
+  }
 }
 
 .nav {
@@ -62,21 +82,25 @@ html {
   width: 100vw;
   height: 60px;
   ul {
-    display: flex;
-    justify-content: space-around;
-    width: 40%;
+    width: 100%;
     li {
+      display: inline-block;
       list-style: none;
       font-family: 'Do Hyeon', 'Jua', sans-serif;
-      font-size: 1.5vw;
+      font-size: 16px;
       font-weight: 300;
+      margin-right: 25px;
+
+      &:first-child {
+        margin-left: 25px;
+      }
+
       a {
         text-decoration: none;
         color: #fff;
-        transition: all 0.8s ease-out;
+        transition: all 0.6s ease-out;
         &:hover {
-          color: #181818;;
-          border-bottom: 2px solid #181818;
+          text-shadow: 4px 0 #f05799;
         }
       }
     }

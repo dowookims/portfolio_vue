@@ -1,9 +1,6 @@
 <template>
   <section class="container">
     <div class="sheet">
-      <div class="img">
-        <img src="@/static/my_pic.jpg" />
-      </div>
       <h2 class="subtitle">
         Project
       </h2>
@@ -14,8 +11,9 @@
 <script>
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .container {
+  background-color: #ddd;
   display: flex;
   padding: 0;
   overflow: hidden;

@@ -1,58 +1,60 @@
 <template>
-  <section class="container">
-    <div class="sheet">
-      <div class="img">
-        <img src="@/static/my_pic.jpg" />
-      </div>
+  <section class="personal">
       <h2 class="subtitle">
         Personal
       </h2>
-    </div>
+      <div
+        class="personal--body"
+        v-show="getDelayVal">
+        <pre>
+          이름 : 김도우
+          생일 : 92. 11. 24
+          전화번호 : 010-4399-2574
+          현 거주지 : 서울
+        </pre>
+      </div>
   </section>
 </template>
 
 <script>
+export default {
+  data(){
+    return {
+      delayVal: false
+    }
+  },
+  methods: {
+    setDelayVal(){
+      setTimeout(() => { this.delayVal = true }, 3000);
+    }
+  },
+  computed: {
+    getDelayVal(){
+      return this.delayVal
+    }
+  },
+  mounted(){
+    this.setDelayVal()
+  },
+
+}
 </script>
 
-<style lang="scss">
-.container {
-  display: flex;
-  padding: 0;
-  overflow: hidden;
-}
-.sheet {
-  height: calc(100vh - 60px);
-  min-width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.img {
-  max-width: 20vw;
-  max-height: 20vw;
-  border-radius: 10vw;
-  img {
-    border-radius: 10vw;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+<style lang="scss" scoped>
+.personal {
+  text-align: center;
+  .subtitle {
+    font-size: 48px;
+    color: #fff;
   }
 }
 
-.subtitle {
-  font-family: 'Nanum Myeongjo', 'Do Hyeon', 'Jua', sans-serif;
-  font-weight: 300;
-  font-size: 2vw;
+.personal--body {
+  display: flex;
+  margin-left: 30%;
+  text-align: left;
+  margin-top: 40px;
   color: #fff;
-  word-spacing: 5px;
-
-  padding-top: 40px;
-}
-
-.links {
-  padding-top: 15px;
 }
 </style>
 

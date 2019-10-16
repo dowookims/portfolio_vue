@@ -10,3 +10,8 @@
   min-height: calc(100vh - 60px);
   overflow-x: hidden;
 }
+
+.container {
+  display: flex;
+  padding: 0;
+}

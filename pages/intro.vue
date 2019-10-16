@@ -63,7 +63,7 @@ export default {
           description: [
             {id: 'e1', date: '2011.03.02 ~ 2018.02.25', texts:'국립 경상대학교 심리학과 학사 졸업'},
             {id: 'e2', date: '2018.04.16 ~ 2018.11.15', texts:'엔코아 플레이데이터 빅데이터 딥러닝 전문가 양성과정 1기'},
-            {id: 'e2', date: '2018.12.10 ~ 현재', texts:'삼성 청년 소프트웨어 아카데미(SSAFY) 1기',},
+            {id: 'e3', date: '2018.12.10 ~ 현재', texts:'삼성 청년 소프트웨어 아카데미(SSAFY) 1기',},
           ]
         },
       programming:
@@ -92,6 +92,7 @@ export default {
   display: flex;
   justify-content: center;
   padding: 10px;
+  font-family: 'Do Hyeon';
   .intro--div {
     width: 100%;
     border-radius: 12px;
@@ -101,6 +102,7 @@ export default {
       padding: 10px 20px;
       background-color: #454598;
       color: #fff;
+      text-shadow: 4px 0 #fcc419;
     }
     .intro--div-detail {
       padding: 18px 20px;
@@ -124,7 +126,6 @@ export default {
         background-color: #454598;
         border-radius: 10px;
         color: #fff;
-        font-family: 'Jua';
       }
       .edu--p-text {
         padding-left: 15px;
