@@ -56,14 +56,19 @@ export default {
 .project--div {
   display: flex;
   width: 100vw;
-  padding: 0 5vw;
+  padding: 20px 5vw 20px 5vw;
   overflow-x: hidden;
 }
 .project--card {
   min-width: 20vw;
   height: 12.36vw;
   background-color: yellow;
-  border-radius: 15px;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
   &:first-child {
     margin-right: 5vw;
   }
