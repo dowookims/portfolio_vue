@@ -3,14 +3,11 @@
       <h2 class="subtitle">
         Personal
       </h2>
-      <div
-        class="personal--body"
-        v-show="getDelayVal">
+      <div class="personal--body">
         <pre>
           이름 : 김도우
           생일 : 92. 11. 24
           전화번호 : 010-4399-2574
-          현 거주지 : 서울
         </pre>
       </div>
   </section>
@@ -25,7 +22,7 @@ export default {
   },
   methods: {
     setDelayVal(){
-      setTimeout(() => { this.delayVal = true }, 3000);
+      setTimeout(() => { this.delayVal = true }, 1000);
     }
   },
   computed: {
@@ -42,6 +39,7 @@ export default {
 
 <style lang="scss" scoped>
 .personal {
+  font-family: 'Nanum Myeongjo';
   text-align: center;
   .subtitle {
     font-size: 48px;
@@ -55,6 +53,7 @@ export default {
   text-align: left;
   margin-top: 40px;
   color: #fff;
+  transition: opacity 0.6s;
 }
 </style>
 

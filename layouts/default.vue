@@ -2,8 +2,11 @@
   <div class="app">
     <nav class="nav">
       <ul>
-        <li :key="item.id" v-for="item in menuItem">
-          <nuxt-link :to="item.url">{{ item.title }}</nuxt-link>
+        <li
+          v-for="item in menuItem"
+          :key="item.id">
+          <nuxt-link :to="item.url"
+          >{{ item.title }}</nuxt-link>
         </li>
       </ul>
     </nav>
@@ -18,12 +21,12 @@ export default {
       menuItem: [
         { id:0, title:'Home', url:'/' },
         { id:1, title:'Intro', url:'intro' },
-        { id:2, title:'Skill', url:'skill' },
-        { id:3, title:'Project', url:'project' },
-        { id:4, title:'Personal', url:'personal' }
-      ]
+        { id:2, title:'Project', url:'project' },
+        { id:3, title:'Personal', url:'personal' }
+      ],
+      activatedIdx: 0
     }
-  }
+  },
 }
 </script>
 
@@ -105,6 +108,10 @@ html {
       }
     }
   }
+}
+
+.nuxt-link-exact-active {
+  text-shadow: 4px 0 #f05799;
 }
 
 </style>

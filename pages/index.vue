@@ -1,6 +1,7 @@
 <template>
   <section class="container">
     <div class="sheet board">
+      <!-- 나중에 transform3d로 마우스 움직임에 따라 이동하는 애니메이션 추가 -->
       <div class="img">
         <img src="@/static/my_pic.jpg" />
       </div>
@@ -20,7 +21,7 @@
           <span>
             <font-awesome-icon :icon="[item.icon[0], item.icon[1]]" />
           </span>
-          {{ item. content }}
+          {{ item.content }}
         </p>
       </div>
     </div>
@@ -49,6 +50,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .sheet {
   display: flex;
   flex-direction: column;
@@ -59,9 +61,11 @@ export default {
 .img {
   max-width: 20vw;
   max-height: 20vw;
-  border-radius: 10vw;
+  min-width: 200px;
+  min-height: 200px;
+  border-radius: 50%;
   img {
-    border-radius: 10vw;
+    border-radius: 50%;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -91,6 +95,12 @@ export default {
       color: #66ff66;
       text-shadow: 4px 0 #55aa55;
     }
+  }
+}
+
+@media (max-width: 430px) {
+  .subtitle {
+    font-size: 18px;
   }
 }
 

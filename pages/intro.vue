@@ -96,7 +96,6 @@ export default {
   .intro--div {
     width: 100%;
     border-radius: 12px;
-    background-color: #fff;
     overflow: hidden;
     .intro--div-title {
       padding: 10px 20px;
@@ -106,6 +105,7 @@ export default {
     }
     .intro--div-detail {
       padding: 18px 20px;
+      background-color: #fff;
       p {
         font-weight: 300;
         line-height: 1.4;
@@ -116,9 +116,6 @@ export default {
     }
     .intro--div-edu-p {
       margin-bottom: 15px;
-      span {
-        font-size: 16px;
-      }
       .edu--p-date {
         display: inline-block;
         width: 200px;
@@ -131,6 +128,21 @@ export default {
         padding-left: 15px;
       }
     }
+  }
+}
+
+@media screen and (min-width: 711px) and (max-width: 1036px) {
+  .edu--p-date, .edu--p-text {
+    display: block;
+  }
+}
+
+@media (max-width: 710px) {
+  .edu--p-date, .edu--p-text {
+    display: block;
+  }
+  .edu--p-text {
+    font-size: 14px;
   }
 }
 
