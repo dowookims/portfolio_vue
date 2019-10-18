@@ -3,7 +3,7 @@
     <div class="sheet board">
       <!-- 나중에 transform3d로 마우스 움직임에 따라 이동하는 애니메이션 추가 -->
       <div class="img">
-        <img src="@/static/my_pic.jpg" />
+        <img src="/my_pic.jpg" />
       </div>
       <h2 class="subtitle">
         Frontend Developer with <span>React</span> & <span>Vue</span>

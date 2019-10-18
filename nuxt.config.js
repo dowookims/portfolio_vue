@@ -18,6 +18,7 @@ module.exports = {
   ],
   modules: [
     '@nuxtjs/axios',
+    '@nuxtjs/markdownit',
     ['nuxt-fontawesome', 
       {
         imports: 
@@ -34,6 +35,18 @@ module.exports = {
       }
     ]
   ],
+  /*
+  ** @nuxtjs/markdownit option  
+  */
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    use: [
+      'markdown-it-div',
+      'markdown-it-attrs'
+    ]
+  },
   /*
   ** Customize the progress bar color
   */

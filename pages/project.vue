@@ -83,7 +83,7 @@ export default {
       if (this.toggler){
         idx = 1
       }
-      return `_nuxt/static/${this.imgList[0][idx]}`
+      return `/${this.imgList[0][idx]}`
     }
   }
 }
