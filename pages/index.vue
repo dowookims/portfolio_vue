@@ -38,11 +38,6 @@ export default {
           content: 'kaei2574@gmail.com',
           icon: ['fas', 'envelope']
         },
-        {
-          id: 'info3',
-          content: '010-4399-2574',
-          icon: ['fas', 'mobile']
-        }
       ]
     }
   }
@@ -89,11 +84,11 @@ export default {
     font-size: 28px;
     &:first-child {
       color: #61DAFB;
-      text-shadow: 4px 0 #22A0B7;
+      text-shadow: 4px 2px #22A0B7;
     }
     &:last-child {
       color: #66ff66;
-      text-shadow: 4px 0 #55aa55;
+      text-shadow: 4px 2px #55aa55;
     }
   }
 }

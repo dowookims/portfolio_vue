@@ -5,9 +5,7 @@
       </h2>
       <div class="personal--body">
         <pre>
-          이름 : 김도우
-          생일 : 92. 11. 24
-          전화번호 : 010-4399-2574
+          😘
         </pre>
       </div>
   </section>
@@ -39,11 +37,12 @@ export default {
 
 <style lang="scss" scoped>
 .personal {
-  font-family: 'Nanum Myeongjo';
   text-align: center;
   .subtitle {
+    font-family: 'Do Hyeon';
     font-size: 48px;
     color: #fff;
+    text-shadow: 4px 4px #df9911;
   }
 }
 
