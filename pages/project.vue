@@ -110,7 +110,7 @@ export default {
   display: flex;
   width: 100vw;
   padding: 20px 5vw 20px 5vw;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .project--card {
