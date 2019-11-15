@@ -6,7 +6,7 @@
         <img src="/my_pic.jpg" />
       </div>
       <h2 class="subtitle">
-        Frontend Developer with <span>React</span> & <span>Vue</span>
+        Frontend Developer with <span>Vue.js</span>
       </h2>
       <div class="sub-detial">
         <p>
@@ -83,10 +83,6 @@ export default {
   span {
     font-size: 28px;
     &:first-child {
-      color: #61DAFB;
-      text-shadow: 4px 2px #22A0B7;
-    }
-    &:last-child {
       color: #66ff66;
       text-shadow: 4px 2px #55aa55;
     }

@@ -4,61 +4,65 @@
       <h1>Project</h1>
     </div>
     <div class="project--div" ref="scrollDiv" >
-      <div class="project--card">
+      <div v-for="project in projectList" :key="project.id">
+      <div class="project--card" @click="handleLink(project.id)">
         <div class="project--card-body"
-          @mouseenter="handleMouseOver"
-          @mouseleave="handleMouseOver">
-          <img :src="imgSrc"/>
+          @mouseenter="handleMouseOver(project.id)"
+          @mouseleave="handleMouseOver(project.id)">
+          <img :src="imgSrc(project.id)"/>
         </div>
         <div class="project--card-txt">
-          <h3>ImageSlider</h3>
-          <p>Netflix, watcha UI reactive design cloning</p>
+          <h3>{{project.title}}</h3>
+          <p>{{project.desc}}</p>
         </div>
       </div>
-      <div class="project--card">
-        <div class="project--card-body">
-
-        </div>
-        <div class="project--card-txt">
-          <h3>Calendar</h3>
-          <p>self-made calendar without momentum</p>
-        </div>
-      </div>
-      <div class="project--card">
-        <div class="project--card-body">
-
-        </div>
-        <div class="project--card-txt">
-          <h3>ModalAnimation</h3>
-          <p>self-made modal without modal library</p>
-        </div>
-      </div>
-      <div class="project--card">
-        <div class="project--card-body">
-
-        </div>
-        <div class="project--card-txt">
-          <h3>Simple Infinite Horizontal Button</h3>
-          <p>Infinite scroll</p>
-        </div>
-      </div>
-      <div class="project--card">
-        <div class="project--card-body">
-
-        </div>
-        <div class="project--card-txt">
-          <h3>move X-axis with mousewheel</h3>
-          <p>use vue event with simple event</p>
-        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+
 export default {
   data(){
     return {
+      projectList: [
+        {
+          id: 0,
+          title: 'HONEYBEE',
+          desc: 'Bigdata project. Netflix UI design cloning',
+          imgList: ['imageSlider.png','imageSlider.gif'],
+          toggle: false
+        },
+        {
+          id: 1,
+          title: '길잡이',
+          desc: 'Recruitmap Using googleMap, SaraminAPI',
+          imgList: ['imageSlider.png','imageSlider.gif'],
+          toggle: false
+        },
+        {
+          id: 2,
+          title: 'ModalAnimation',
+          desc: 'self-made modal without modal library',
+          imgList: ['imageSlider.png','imageSlider.gif'],
+          toggle: false
+        },
+        {
+          id: 3,
+          title: 'Simple Infinite Horizontal Button',
+          desc: 'Infinite scroll',
+          imgList: ['imageSlider.png','imageSlider.gif'],
+          toggle: false
+        },
+        {
+          id: 4,
+          title: 'move X-axis with mousewheel',
+          desc: 'use vue event with simple event',
+          imgList: ['imageSlider.png','imageSlider.gif'],
+          toggle: false
+        },
+      ],
       imgList: [
         ['imageSlider.png','imageSlider.gif']
       ],
@@ -73,18 +77,22 @@ export default {
         this.$refs.scrollDiv.scrollLeft += e.wheelDelta;
       }
     },
-    handleMouseOver(){
-      this.toggler = !this.toggler
+    handleMouseOver(id){
+      this.projectList[id].toggle = !this.projectList[id].toggle
+    },
+    handleLink(id){
+      this.$router.push(`/post/${id}`)
+    },
+    imgSrc(id){
+      let idx = 0
+      if (this.projectList[id].toggle){
+        idx = 1
+      }
+      return `/${this.projectList[id].imgList[idx]}`
     }
   },
   computed: {
-    imgSrc(){
-      let idx = 0
-      if (this.toggler){
-        idx = 1
-      }
-      return `/${this.imgList[0][idx]}`
-    }
+    
   }
 }
 </script>
@@ -111,6 +119,7 @@ export default {
   width: 100vw;
   padding: 20px 5vw 20px 5vw;
   overflow: hidden;
+  margin-top: 20vh;
 }
 
 .project--card {
@@ -130,6 +139,7 @@ export default {
 
   .project--card-body {
     display: flex;
+    box-sizing: border-box;
     width: 100%;
     min-height: 10vw;
     max-height: 10vw;
@@ -138,8 +148,8 @@ export default {
     img {
       width: 100%;
       margin-top: 6%;
-      height: 94%;
-      object-fit: contain;
+      max-height: 80%;
+      object-fit: cover;
     }
   }
 }

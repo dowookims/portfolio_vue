@@ -1,3 +1,6 @@
+import hljs from 'highlight.js'
+import md from 'markdown-it'
+console.log('markdown',md)
 module.exports = {
   /*
   ** Headers of the page
@@ -14,7 +17,7 @@ module.exports = {
     ]
   },
   css: [
-    'assets/main.scss'
+    'assets/main.scss',
   ],
   modules: [
     '@nuxtjs/axios',
@@ -39,12 +42,24 @@ module.exports = {
   ** @nuxtjs/markdownit option  
   */
   markdownit: {
-    preset: 'default',
+    injected: true,
     linkify: true,
     breaks: true,
+    emoji: true,
+    // highlight: function (str, lang) {
+    //   if (lang && hljs.getLanguage(lang)) {
+    //     try {
+    //       return '<pre class="hljs"><code>' +
+    //         hljs.highlight(lang, str, true).value +
+    //         '</code></pre>';
+    //     } catch (__) {}
+    //   }
+  
+    //   return '<pre class="hljs"><code>' + md.util.escapeHtml(str) + '</code></pre>';
+    // },
     use: [
       'markdown-it-div',
-      'markdown-it-attrs'
+      'markdown-it-attrs',
     ]
   },
   /*

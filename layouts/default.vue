@@ -20,9 +20,9 @@ export default {
     return {
       menuItem: [
         { id:0, title:'Home', url:'/' },
-        { id:1, title:'Intro', url:'intro' },
-        { id:2, title:'Project', url:'project' },
-        { id:3, title:'Personal', url:'personal' }
+        { id:1, title:'Intro', url:'/intro' },
+        { id:2, title:'Project', url:'/project' },
+        { id:3, title:'Personal', url:'/personal' }
       ],
       activatedIdx: 0
     }
@@ -55,9 +55,7 @@ html {
 
 .app {
   background-color: #181818;
-  min-height: 100vh;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  height: 100vh;
   &::-webkit-scrollbar-track
   {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
