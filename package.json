@@ -19,7 +19,7 @@
     "@fortawesome/vue-fontawesome": "^0.1.7",
     "@nuxtjs/axios": "^5.6.0",
     "@nuxtjs/markdownit": "^1.2.7",
-    "highlight.js": "^9.15.10",
+    "highlight.js": "^10.1.2",
     "markdown-it": "^10.0.0",
     "markdown-it-attrs": "^3.0.1",
     "markdown-it-div": "^1.1.0",
