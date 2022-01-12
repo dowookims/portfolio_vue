@@ -20,7 +20,7 @@
     "@nuxtjs/axios": "^5.6.0",
     "@nuxtjs/markdownit": "^1.2.7",
     "highlight.js": "^9.15.10",
-    "markdown-it": "^10.0.0",
+    "markdown-it": "^12.3.2",
     "markdown-it-attrs": "^3.0.1",
     "markdown-it-div": "^1.1.0",
     "markdown-it-highlightjs": "^3.0.0",
